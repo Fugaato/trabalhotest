@@ -1,0 +1,40 @@
+<div>
+    <div>
+      <div >
+        <h1 >Registrar Ocorrencias</h1>
+        <form action="/ocorrencia/registrar" method="POST">
+          <div class="form-group">
+            <label for="tipo">Tipo da Ocorrencia ( Ex: Roubo )</label>
+            <input
+               type="tipo" id="tipo" name="tipo" class="form-control" placeholder="Digite o tipo" value="<%= typeof tipo != 'undefined' ? tipo : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="dataOcorrencia">Data da Ocorrencia</label>
+            <input
+              type="date" id="dataOcorrencia" name="dataOcorrencia" class="form-control" placeholder="Digite a data" value="<%= typeof dataOcorrencia != 'undefined' ? dataOcorrencia : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="local">Local da ocorrencia</label>
+            <input
+               type="local"  id="local" name="local" class="form-control" placeholder="Digite o local" value="<%= typeof local != 'undefined' ? local : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="nome">Seu Nome</label>
+            <input
+             type="nome" name="nome" class="form-control" placeholder="Digite a nome" value="<%= typeof nome != 'undefined' ? nome : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="vitimas">Foi feito alguma vitima ?</label>
+            <input
+              type="checkbox" id="vitimas" name="vitimas" class="form-control" placeholder="Foi feito alguma vitima ?", checked="checked", value="1"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Registrar</button>
+        </form>
+      </div>
+    </div>
+  </div>

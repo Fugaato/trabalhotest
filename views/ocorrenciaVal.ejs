@@ -1,0 +1,32 @@
+<% include ../public/functions %> 
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body">
+            <a href="/ocorrencia/validar">Validar Ocorrências</a>
+            </div>
+            <hr>
+            
+            <% if(details!=null) { %>
+            <table>
+            <tr >
+                <th>Tipo</th>
+                <th>DataOcorrencia </th>
+                <th>Local</th>
+                <th>Nome </th>
+                <th>Vitimas </th>
+            </tr>
+            <% details.forEach(function(item){ %>
+            <tr>
+                <td><%= item.tipo%></td>
+                <td><%= item.dataOcorrencia %></td>
+                <td><%= item.local%></td>
+                <td><%= item.nome %></td>
+                <td><%= item.vitimas%></td>
+                <td><button type="button"  onclick="validarOcorr('<%= item._id %>')"> VALIDAR </button> </td>
+                <td><button type="button"  onclick="negarOcorr('<%= item._id %>')"> NEGAR </button> </td>
+            </tr>
+            <% }) %>
+            </table>
+        <% } %> 
+    </div>
+</div>

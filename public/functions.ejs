@@ -1,0 +1,36 @@
+<script>
+function validarOcorr(item) {
+    const url = '/ocorrencia/validar';
+    let data = {
+        id: item
+    }
+
+    let fetchData = { 
+        method: 'POST', 
+        body: JSON.stringify(data),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }
+    fetch(url, fetchData)
+    .then(function() {});
+}
+
+function negarOcorr(item) {
+    const url = '/ocorrencia/negar';
+    let data = {
+        id: item
+    }
+
+    let fetchData = { 
+        method: 'POST', 
+        body: JSON.stringify(data),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }
+    fetch(url, fetchData)
+    .then(function() {});
+}
+
+</script>
